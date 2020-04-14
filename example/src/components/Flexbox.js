@@ -11,12 +11,12 @@ const FlexItem = styled(Box)`
 
 export default () => (
   <Fragment>
-    <FlexContainer reverse direction="row" justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+    <FlexContainer reverse direction="row" justify="space-around" align="center" className="bg-dark" style={{height: "200px"}}>
       <FlexItem>01</FlexItem>
       <FlexItem>02</FlexItem>
     </FlexContainer>
     <Line />
-    <FlexContainer wrap direction="row" justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+    <FlexContainer wrap direction="col" justify="center" align="stretch" className="bg-dark" style={{height: "200px"}}>
       <FlexItem>01</FlexItem><FlexItem>02</FlexItem><FlexItem>03</FlexItem><FlexItem>04</FlexItem><FlexItem>05</FlexItem>
       <FlexItem>06</FlexItem><FlexItem>07</FlexItem><FlexItem>08</FlexItem><FlexItem>09</FlexItem><FlexItem>10</FlexItem>
       <FlexItem>11</FlexItem><FlexItem>12</FlexItem><FlexItem>13</FlexItem><FlexItem>14</FlexItem><FlexItem>15</FlexItem>
@@ -27,10 +27,10 @@ export default () => (
     <Line />
     <FlexContainer direction="row" justify="center" align="stretch" className="bg-dark" style={{height: "200px"}}>
       <FlexItem order="3" length="100px">01</FlexItem>
-      <FlexItem grow order="2" align="center">02</FlexItem>
-      <FlexItem grow order="0">03</FlexItem>
-      <FlexItem shrink order="1">04</FlexItem>
-      <FlexItem grow order="4">05</FlexItem>
+      <FlexItem order="2" grow align="center">02</FlexItem>
+      <FlexItem order="0" grow>03</FlexItem>
+      <FlexItem order="1" length="100px">04</FlexItem>
+      <FlexItem order="4" grow>05</FlexItem>
     </FlexContainer>
     <BreakLine />
   </Fragment>
