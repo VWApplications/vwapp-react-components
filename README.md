@@ -173,8 +173,10 @@ As imagens estão organizados em direction **row**, **col**, e **wrap** respecti
 
   - **space-between**: Alinha os itens com espaçamentos entre eles. Só funciona com o wrap setado. css: "align-content".
 
+    row
     ![space-between row](https://user-images.githubusercontent.com/14116020/79191408-e545aa00-7dfc-11ea-8933-3e0fc4164f24.png)
 
+    col
     ![space-between col](https://user-images.githubusercontent.com/14116020/79191453-ff7f8800-7dfc-11ea-835a-f9da7c7ce7bd.png)
 
 #### Propriedades (FlexItem)
@@ -198,23 +200,23 @@ Ou seja, a lista de itens só pode ter no máximo 12 itens. (String - Opcional -
 
 * **align**: Especifica o alinhamento do item selecionado dentro do conteiner. A propriedade substitui o alinhamento do atributo "align" definido no container. (String - Opcional - css: align-self).
 
-  - **start**: Alinha os itens no começo.
+  - **start**: Alinha o item no começo.
 
     ![start](https://user-images.githubusercontent.com/14116020/79192006-47eb7580-7dfe-11ea-992f-0da3382066c7.png)
 
-  - **end**: Alinha os itens no final.
+  - **end**: Alinha o item no final.
 
     ![end](https://user-images.githubusercontent.com/14116020/79191924-183c6d80-7dfe-11ea-8ae3-50c5e73be08c.png)
 
-  - **center**: Alinha os itens no centro.
+  - **center**: Alinha o item no centro.
 
     ![center](https://user-images.githubusercontent.com/14116020/79191830-dad7e000-7dfd-11ea-95ab-0bf42bf8ee74.png)
 
-  - **stretch**: Preenche os itens no container.
+  - **stretch**: Preenche o item no container.
 
     ![stretch](https://user-images.githubusercontent.com/14116020/79192050-5e91cc80-7dfe-11ea-92da-9d441e8cdb4b.png)
 
-  - **baseline**: Alinha os itens tendo como base seu texto.
+  - **baseline**: Alinha o item tendo como base seu texto.
 
     ![start](https://user-images.githubusercontent.com/14116020/79192006-47eb7580-7dfe-11ea-992f-0da3382066c7.png)
 
