@@ -17,6 +17,10 @@ export function moveToTop() {
   document.documentElement.scrollTop = 0;
 }
 
+export function toBoolean(value) {
+  return (value === 'true');
+}
+
 export const toString = (list = [], join = ' ') => {
   let string = '';
   list.map((item, index) => {

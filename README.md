@@ -15,31 +15,43 @@ npm install --save vwapp-react-components
 ## Uso
 
 ```jsx
-import React, { Component } from 'react';
-import { Pagination } from 'vwapp-react-components';
+import React, { Fragment } from 'react';
+import { FlexContainer, FlexItem as Box, Line, BreakLine } from 'vwapp-react-components';
+import styled from 'styled-components';
 
-class Pagination extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {activePage: 1};
-  }
+const FlexItem = styled(Box)`
+  background-color: green;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+`
 
-  __handlePagination = page => {
-    console.log(`Pagina: ${page}`);
-    this.setState({ activePage: page });
-  }
-
-  render() {
-    return (
-      <Pagination
-        totalItens={60}
-        itemPerPage={20}
-        activePage={this.state.activePage}
-        handlePagination={this.__handlePagination}
-      />
-    )
-  }
-}
+export default () => (
+  <Fragment>
+    <FlexContainer reverse direction="row" justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem>01</FlexItem>
+      <FlexItem>02</FlexItem>
+    </FlexContainer>
+    <Line />
+    <FlexContainer wrap direction="row" justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem>01</FlexItem><FlexItem>02</FlexItem><FlexItem>03</FlexItem><FlexItem>04</FlexItem><FlexItem>05</FlexItem>
+      <FlexItem>06</FlexItem><FlexItem>07</FlexItem><FlexItem>08</FlexItem><FlexItem>09</FlexItem><FlexItem>10</FlexItem>
+      <FlexItem>11</FlexItem><FlexItem>12</FlexItem><FlexItem>13</FlexItem><FlexItem>14</FlexItem><FlexItem>15</FlexItem>
+      <FlexItem>16</FlexItem><FlexItem>17</FlexItem><FlexItem>18</FlexItem><FlexItem>19</FlexItem><FlexItem>20</FlexItem>
+      <FlexItem>21</FlexItem><FlexItem>22</FlexItem><FlexItem>23</FlexItem><FlexItem>24</FlexItem><FlexItem>25</FlexItem>
+      <FlexItem>26</FlexItem><FlexItem>27</FlexItem><FlexItem>28</FlexItem><FlexItem>29</FlexItem><FlexItem>30</FlexItem>
+    </FlexContainer>
+    <Line />
+    <FlexContainer direction="row" justify="center" align="stretch" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem order="3" length="100px">01</FlexItem>
+      <FlexItem grow order="2" align="center">02</FlexItem>
+      <FlexItem grow order="0">03</FlexItem>
+      <FlexItem shrink order="1">04</FlexItem>
+      <FlexItem grow order="4">05</FlexItem>
+    </FlexContainer>
+    <BreakLine />
+  </Fragment>
+);
 ```
 
 ## Documentação
@@ -57,17 +69,17 @@ Componentes para facilitar o uso do flexbox.
 
 #### Propriedades (FlexContainer)
 
-* **wrap**: Faz com que os itens ao chegar no limite passe para a próxima linha ou coluna. (Booleano - padrão: false - attr: flex-wrap)
+* **wrap**: Faz com que os itens ao chegar no limite passe para a próxima linha ou coluna. (Booleano - padrão: false - css: flex-wrap)
 
-* **reverse**: Inverte a ordem dos itens definidas no atributo "direction" ou "wrap". Ele também inverte o alinhamento do atributo "justify" (Booleano - padrão: false - attr: flex-direction e flex-wrap).
+* **reverse**: Inverte a ordem dos itens definidas no atributo "direction" ou "wrap". Ele também inverte o alinhamento do atributo "justify" (Booleano - padrão: false - css: flex-direction e flex-wrap).
 
-* **direction**: Empilha os itens horizontalmente ou verticalmente, ou seja, da esquerda para a direita ou de cima para baixo. (String - padrão: "row" - attr: flex-direction).
+* **direction**: Empilha os itens horizontalmente ou verticalmente, ou seja, da esquerda para a direita ou de cima para baixo. (String - padrão: "row" - css: flex-direction).
 
   - **row**: Empilha os itens horizontalmente, ou seja, da esquerda para a direita.
 
   - **col**: Empilha os itens verticalmente, ou seja, de cima para baixo.
 
-* **justify**: Alinha todos os itens do container verticalmente (col) ou horizontalmente (row). (String - padrão: "initial" - attr: justify-content).
+* **justify**: Alinha todos os itens do container verticalmente (col) ou horizontalmente (row). (String - padrão: "initial" - css: justify-content).
 
   - **start**: Alinha os itens no começo.
 
@@ -79,7 +91,7 @@ Componentes para facilitar o uso do flexbox.
 
   - **space-between**: Alinha os itens com espaçamentos entre eles.
 
-* **align**: Alinha todos os itens do container verticalmente (row) ou horizontalmente (col). (String - padrão: "initial" - attr: align-items ou align-content). O "align-content" é ativado se o container tiver o atributo "wrap" setado nele, ou seja, ele alinha os conjuntos de itens como um todo. Caso contrário é ativado o "align-items" que alinha os itens separadamente.
+* **align**: Alinha todos os itens do container verticalmente (row) ou horizontalmente (col). (String - padrão: "initial" - css: align-items ou align-content). O "align-content" é ativado se o container tiver o atributo "wrap" setado nele, ou seja, ele alinha os conjuntos de itens como um todo. Caso contrário é ativado o "align-items" que alinha os itens separadamente.
 
   - **start**: Alinha os itens no começo.
 
@@ -89,42 +101,71 @@ Componentes para facilitar o uso do flexbox.
 
   - **stretch**: Preenche os itens no container.
 
-  - **baseline**: Alinha os itens tendo como base seu texto. Só funciona com o wrap **não** setado. Attr: "align-items".
+  - **baseline**: Alinha os itens tendo como base seu texto. Só funciona com o wrap **não** setado. css: "align-items".
 
-  - **space-around**: Alinha os itens com espaçamentos ao redor deles. Só funciona com o wrap setado. Attr: "align-content".
+  - **space-around**: Alinha os itens com espaçamentos ao redor deles. Só funciona com o wrap setado. css: "align-content".
 
-  - **space-between**: Alinha os itens com espaçamentos entre eles. Só funciona com o wrap setado. Attr: "align-content".
+  - **space-between**: Alinha os itens com espaçamentos entre eles. Só funciona com o wrap setado. css: "align-content".
 
 #### Propriedades (FlexItem)
+
+* **order**: Ordena os itens da forma que for inserido. Só é aceito valores de 1-12 e todos os itens devem ser preenchidos.
+Ou seja, a lista de itens só pode ter no máximo 12 itens. (String - Opcional - css: order)
+
+* **grow**: Faz o item crescer proporcionalmente em relação aos demais, preenchendo a linha. (Booleano - default: false - css: flex-grow)
+
+* **shrink**: Não deixe o item diminuir tanto quanto os outros itens. (Booleano - default: false - css: flex-shrink)
+
+* **length**: Configura um tamanho inicial para o item em pixels. (String - Opcional - css: flex-basis).
+
+* **align**: Especifica o alinhamento do item selecionado dentro do conteiner. A propriedade substitui o alinhamento do atributo "align" definido no container. (String - Opcional - css: align-self).
+
+  - **start**: Alinha os itens no começo.
+
+  - **end**: Alinha os itens no final.
+
+  - **center**: Alinha os itens no centro.
+
+  - **stretch**: Preenche os itens no container.
+
+  - **baseline**: Alinha os itens tendo como base seu texto.
 
 #### Exemplo
 
 ```jsx
 import React, { Fragment } from 'react';
-import { FlexContainer, FlexItem as Box } from 'vwapp-react-components';
+import { FlexContainer, FlexItem as Box, Line, BreakLine } from 'vwapp-react-components';
 import styled from 'styled-components';
 
 const FlexItem = styled(Box)`
   background-color: green;
+  text-align: center;
   margin: 10px;
-  width: 30px;
-  height: 30px;
+  padding: 5px;
 `
 
 export default () => (
   <Fragment>
-    <FlexContainer row justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
-      <FlexItem />
-      <FlexItem />
+    <FlexContainer reverse direction="row" justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem>01</FlexItem>
+      <FlexItem>02</FlexItem>
     </FlexContainer>
     <Line />
-    <FlexContainer row wrap justify="center" align="start" className="bg-dark" style={{height: "200px"}}>
-      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
-      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
-      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
-      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
-      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
-      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+    <FlexContainer wrap direction="row" justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem>01</FlexItem><FlexItem>02</FlexItem><FlexItem>03</FlexItem><FlexItem>04</FlexItem><FlexItem>05</FlexItem>
+      <FlexItem>06</FlexItem><FlexItem>07</FlexItem><FlexItem>08</FlexItem><FlexItem>09</FlexItem><FlexItem>10</FlexItem>
+      <FlexItem>11</FlexItem><FlexItem>12</FlexItem><FlexItem>13</FlexItem><FlexItem>14</FlexItem><FlexItem>15</FlexItem>
+      <FlexItem>16</FlexItem><FlexItem>17</FlexItem><FlexItem>18</FlexItem><FlexItem>19</FlexItem><FlexItem>20</FlexItem>
+      <FlexItem>21</FlexItem><FlexItem>22</FlexItem><FlexItem>23</FlexItem><FlexItem>24</FlexItem><FlexItem>25</FlexItem>
+      <FlexItem>26</FlexItem><FlexItem>27</FlexItem><FlexItem>28</FlexItem><FlexItem>29</FlexItem><FlexItem>30</FlexItem>
+    </FlexContainer>
+    <Line />
+    <FlexContainer direction="row" justify="center" align="stretch" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem order="3" length="100px">01</FlexItem>
+      <FlexItem grow order="2" align="center">02</FlexItem>
+      <FlexItem grow order="0">03</FlexItem>
+      <FlexItem shrink order="1">04</FlexItem>
+      <FlexItem grow order="4">05</FlexItem>
     </FlexContainer>
     <BreakLine />
   </Fragment>

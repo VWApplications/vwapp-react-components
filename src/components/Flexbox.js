@@ -1,23 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import { toBoolean } from '../utils';
 
 const CustomFlexContainer = styled.div`
   display: flex;
   flex-direction: ${props => {
     switch (props.direction) {
       case 'row':
-        if (props.reverse) return 'row-reverse';
+        if (toBoolean(props.reverse)) return 'row-reverse';
         return 'row';
       case 'col':
-        if (props.reverse) return 'column-reverse';
+        if (toBoolean(props.reverse)) return 'column-reverse';
         return 'column';
       default:
-        return 'row';
+        return 'initial';
     }
   }};
   flex-wrap: ${props => {
-    if (props.wrap) {
-      if (props.reverse) {
+    if (toBoolean(props.wrap)) {
+      if (toBoolean(props.reverse)) {
         return 'wrap-reverse';
       } else {
         return 'wrap';
@@ -41,7 +42,7 @@ const CustomFlexContainer = styled.div`
         return 'initial';
     }
   }};
-  ${props => props.wrap ? 'align-content' : 'align-items'}: ${props => {
+  ${props => toBoolean(props.wrap) ? 'align-content' : 'align-items'}: ${props => {
     switch (props.align) {
       case 'start':
         return 'flex-start';
@@ -52,13 +53,13 @@ const CustomFlexContainer = styled.div`
       case 'stretch':
         return 'stretch';
       case 'baseline':
-        if (props.wrap) return 'initial';
+        if (toBoolean(props.wrap)) return 'initial';
         return 'baseline';
       case 'space-between':
-        if (!props.wrap) return 'initial';
+        if (!toBoolean(props.wrap)) return 'initial';
         return 'space-between';
       case 'space-around':
-        if (!props.wrap) return 'initial';
+        if (!toBoolean(props.wrap)) return 'initial';
         return 'space-around';
       default:
         return 'initial';
@@ -67,11 +68,38 @@ const CustomFlexContainer = styled.div`
 `;
 
 export const FlexContainer = props => {
-  return <CustomFlexContainer {...props}>{props.children}</CustomFlexContainer>
+  const attributes = { ...props };
+  attributes.wrap = attributes.wrap ? 'true' : 'false';
+  attributes.reverse = attributes.reverse ? 'true' : 'false';
+  return <CustomFlexContainer {...attributes}>{props.children}</CustomFlexContainer>
 }
 
-const CustomFlexItem = styled.div``;
+const CustomFlexItem = styled.div`
+  flex-grow: ${props => toBoolean(props.grow) ? '1' : '0'};
+  flex-shrink: ${props => toBoolean(props.shrink) ? '0' : '1'};
+  ${props => props.order !== undefined ? 'order' : null}: ${props => props.order};
+  ${props => props.length !== undefined ? 'flex-basis' : null}: ${props => props.length};
+  ${props => props.align !== undefined ? 'align-self' : null}: ${props => {
+    switch (props.align) {
+      case 'start':
+        return 'flex-start';
+      case 'end':
+        return 'flex-end';
+      case 'center':
+        return 'center';
+      case 'stretch':
+        return 'stretch';
+      case 'baseline':
+        return 'baseline';
+      default:
+        return 'initial';
+    }
+  }}
+`;
 
 export const FlexItem = props => {
-  return <CustomFlexItem {...props}>{props.children}</CustomFlexItem>
+  const attributes = { ...props };
+  attributes.grow = attributes.grow ? 'true' : 'false';
+  attributes.shrink = attributes.shrink ? 'true' : 'false';
+  return <CustomFlexItem {...attributes}>{props.children}</CustomFlexItem>
 }
