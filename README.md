@@ -2,7 +2,7 @@
 
 Componentes customizados usando o bootstrap4 de forma mais legivel em react.
 
-Os componentes de formulário forma passados para a lib: [vwapp-react-form](https://github.com/VictorDeon/vwapp-react-form)
+Os componentes de formulário foram passados para a lib: [vwapp-react-form](https://github.com/VictorDeon/vwapp-react-form)
 
 [![NPM](https://img.shields.io/npm/v/vwapp-react-components.svg)](https://www.npmjs.com/package/vwapp-react-components) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 

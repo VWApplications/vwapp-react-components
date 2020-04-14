@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import MyPagination from './components/Pagination';
+import Flexbox from './components/Flexbox';
 
 class App extends Component {
   render() {
@@ -8,7 +8,7 @@ class App extends Component {
       <Container>
         <h1>Página voltada para testes.</h1>
         <hr />
-        <MyPagination />
+        <Flexbox />
       </Container>
     )
   }
