@@ -4,18 +4,15 @@ import styled from 'styled-components';
 const CustomFlexContainer = styled.div`
   display: flex;
   flex-direction: ${props => {
-    if (props.col) {
-      if (props.reverse) {
-        return 'column-reverse';
-      } else {
-        return 'column';
-      }
-    } else {
-      if (props.reverse) {
-        return 'row-reverse';
-      } else {
+    switch (props.direction) {
+      case 'row':
+        if (props.reverse) return 'row-reverse';
         return 'row';
-      }
+      case 'col':
+        if (props.reverse) return 'column-reverse';
+        return 'column';
+      default:
+        return 'row';
     }
   }};
   flex-wrap: ${props => {
@@ -30,6 +27,8 @@ const CustomFlexContainer = styled.div`
   }};
   justify-content: ${props => {
     switch (props.justify) {
+      case 'start':
+        return 'flex-start';
       case 'end':
         return 'flex-end';
       case 'center':
@@ -38,8 +37,6 @@ const CustomFlexContainer = styled.div`
         return 'space-around';
       case 'space-between':
         return 'space-between';
-      case 'start':
-        return 'flex-start';
       default:
         return 'initial';
     }

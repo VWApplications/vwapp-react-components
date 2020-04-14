@@ -46,7 +46,92 @@ class Pagination extends Component {
 
 Além das propriedades especificas de cada componente, também pode ser inserido outras propriedades como: id, className, ...
 
-### 1. Pagination
+### 1. Flexbox
+
+Componentes para facilitar o uso do flexbox.
+
+#### Componentes
+
+* FlexContainer
+* FlexItem
+
+#### Propriedades (FlexContainer)
+
+* **wrap**: Faz com que os itens ao chegar no limite passe para a próxima linha ou coluna. (Booleano - padrão: false - attr: flex-wrap)
+
+* **reverse**: Inverte a ordem dos itens definidas no atributo "direction" ou "wrap". Ele também inverte o alinhamento do atributo "justify" (Booleano - padrão: false - attr: flex-direction e flex-wrap).
+
+* **direction**: Empilha os itens horizontalmente ou verticalmente, ou seja, da esquerda para a direita ou de cima para baixo. (String - padrão: "row" - attr: flex-direction).
+
+  - **row**: Empilha os itens horizontalmente, ou seja, da esquerda para a direita.
+
+  - **col**: Empilha os itens verticalmente, ou seja, de cima para baixo.
+
+* **justify**: Alinha todos os itens do container verticalmente (col) ou horizontalmente (row). (String - padrão: "initial" - attr: justify-content).
+
+  - **start**: Alinha os itens no começo.
+
+  - **end**: Alinha os itens no final.
+
+  - **center**: Alinha os itens no centro.
+
+  - **space-around**: Alinha os itens com espaçamentos ao redor deles.
+
+  - **space-between**: Alinha os itens com espaçamentos entre eles.
+
+* **align**: Alinha todos os itens do container verticalmente (row) ou horizontalmente (col). (String - padrão: "initial" - attr: align-items ou align-content). O "align-content" é ativado se o container tiver o atributo "wrap" setado nele, ou seja, ele alinha os conjuntos de itens como um todo. Caso contrário é ativado o "align-items" que alinha os itens separadamente.
+
+  - **start**: Alinha os itens no começo.
+
+  - **end**: Alinha os itens no final.
+
+  - **center**: Alinha os itens no centro.
+
+  - **stretch**: Preenche os itens no container.
+
+  - **baseline**: Alinha os itens tendo como base seu texto. Só funciona com o wrap **não** setado. Attr: "align-items".
+
+  - **space-around**: Alinha os itens com espaçamentos ao redor deles. Só funciona com o wrap setado. Attr: "align-content".
+
+  - **space-between**: Alinha os itens com espaçamentos entre eles. Só funciona com o wrap setado. Attr: "align-content".
+
+#### Propriedades (FlexItem)
+
+#### Exemplo
+
+```jsx
+import React, { Fragment } from 'react';
+import { FlexContainer, FlexItem as Box } from 'vwapp-react-components';
+import styled from 'styled-components';
+
+const FlexItem = styled(Box)`
+  background-color: green;
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+`
+
+export default () => (
+  <Fragment>
+    <FlexContainer row justify="center" align="center" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem />
+      <FlexItem />
+    </FlexContainer>
+    <Line />
+    <FlexContainer row wrap justify="center" align="start" className="bg-dark" style={{height: "200px"}}>
+      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+      <FlexItem /><FlexItem /><FlexItem /><FlexItem /><FlexItem />
+    </FlexContainer>
+    <BreakLine />
+  </Fragment>
+);
+```
+
+### 2. Pagination
 
 Componentes relacionados a criação de paginações.
 
