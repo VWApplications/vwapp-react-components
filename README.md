@@ -89,86 +89,113 @@ As imagens estão organizados em direction **row**, **col**, e **wrap** respecti
 
 * **wrap**: Faz com que os itens ao chegar no limite passe para a próxima linha ou coluna. (Booleano - padrão: false - css: flex-wrap)
 
+  nowrap
   ![nowrap](https://user-images.githubusercontent.com/14116020/79189115-508c7d80-7df7-11ea-821e-8e3ac2ee675a.png)
 
+  wrap
   ![wrap](https://user-images.githubusercontent.com/14116020/79189173-73b72d00-7df7-11ea-8d81-263ab5075404.png)
 
 * **reverse**: Inverte a ordem dos itens definidas no atributo "direction" ou "wrap". Ele também inverte o alinhamento do atributo "justify" (Booleano - padrão: false - css: flex-direction e flex-wrap).
 
+  row
   ![reverse row](https://user-images.githubusercontent.com/14116020/79189242-9fd2ae00-7df7-11ea-969a-d41d264a6322.png)
 
+  col
   ![reverse col](https://user-images.githubusercontent.com/14116020/79189323-d3add380-7df7-11ea-9079-5a1795ee83f3.png)
 
+  wrap
   ![reverse wrap](https://user-images.githubusercontent.com/14116020/79189419-11126100-7df8-11ea-9394-6bd8e8887aa3.png)
 
 * **justify**: Alinha todos os itens do container verticalmente (col) ou horizontalmente (row). (String - padrão: "initial" - css: justify-content).
 
   - **start**: Alinha os itens no começo.
 
+    row
     ![start row](https://user-images.githubusercontent.com/14116020/79189741-eecd1300-7df8-11ea-9d03-c4b40363ee3b.png)
 
+    col
     ![start col](https://user-images.githubusercontent.com/14116020/79189779-099f8780-7df9-11ea-9850-6a1d3b297866.png)
 
   - **end**: Alinha os itens no final.
 
+    row
     ![end row](https://user-images.githubusercontent.com/14116020/79189832-2a67dd00-7df9-11ea-81ef-ff7a36418c6b.png)
 
+    col
     ![end col](https://user-images.githubusercontent.com/14116020/79189894-4d928c80-7df9-11ea-864a-803e4eb27fae.png)
 
   - **center**: Alinha os itens no centro.
 
+    row
     ![center row](https://user-images.githubusercontent.com/14116020/79190002-90ecfb00-7df9-11ea-8d8e-7ca8e64398ec.png)
 
+    col
     ![center col](https://user-images.githubusercontent.com/14116020/79190059-b37f1400-7df9-11ea-867d-67cc092ef69a.png)
 
   - **space-around**: Alinha os itens com espaçamentos ao redor deles.
 
+    row
     ![space-around row](https://user-images.githubusercontent.com/14116020/79190272-4029d200-7dfa-11ea-9328-ab6ef4230979.png)
 
+    col
     ![space-around col](https://user-images.githubusercontent.com/14116020/79190314-60f22780-7dfa-11ea-95fc-25cb519d4d56.png)
 
   - **space-between**: Alinha os itens com espaçamentos entre eles.
 
+    row
     ![space-between row](https://user-images.githubusercontent.com/14116020/79190154-f0e3a180-7df9-11ea-9317-ac266120c4c9.png)
 
+    col
     ![space-between col](https://user-images.githubusercontent.com/14116020/79190232-212b4000-7dfa-11ea-910e-8aea857d1397.png)
 
 * **align**: Alinha todos os itens do container verticalmente (row) ou horizontalmente (col). (String - padrão: "initial" - css: align-items ou align-content). O "align-content" é ativado se o container tiver o atributo "wrap" setado nele, ou seja, ele alinha os conjuntos de itens como um todo. Caso contrário é ativado o "align-items" que alinha os itens separadamente.
 
   - **start**: Alinha os itens no começo.
 
+    row
     ![start row](https://user-images.githubusercontent.com/14116020/79190412-a0207880-7dfa-11ea-8df1-64bbb75e58bb.png)
 
+    col
     ![start col](https://user-images.githubusercontent.com/14116020/79190485-d65df800-7dfa-11ea-8dbe-22d096ee1d17.png)
 
   - **end**: Alinha os itens no final.
 
+    row
     ![end row](https://user-images.githubusercontent.com/14116020/79190553-fb526b00-7dfa-11ea-8c3c-647ae484c84a.png)
 
+    col
     ![end col](https://user-images.githubusercontent.com/14116020/79190610-1cb35700-7dfb-11ea-96ce-da042c0c7bfa.png)
 
   - **center**: Alinha os itens no centro.
 
+    row
     ![center row](https://user-images.githubusercontent.com/14116020/79190749-6bf98780-7dfb-11ea-8486-5a9456e97ace.png)
 
+    col
     ![center col](https://user-images.githubusercontent.com/14116020/79190804-8c294680-7dfb-11ea-86f6-9117057c5115.png)
 
   - **stretch**: Preenche os itens no container.
 
+    row
     ![stretch row](https://user-images.githubusercontent.com/14116020/79190895-c2ff5c80-7dfb-11ea-9d5e-2b0133cd1680.png)
 
+    col
     ![stretch col](https://user-images.githubusercontent.com/14116020/79190995-f4782800-7dfb-11ea-8d0c-8c0fe7e7f10b.png)
 
   - **baseline**: Alinha os itens tendo como base seu texto. Só funciona com o wrap **não** setado. css: "align-items".
 
+    row
     ![baseline row](https://user-images.githubusercontent.com/14116020/79189741-eecd1300-7df8-11ea-9d03-c4b40363ee3b.png)
 
+    col
     ![baseline col](https://user-images.githubusercontent.com/14116020/79189779-099f8780-7df9-11ea-9850-6a1d3b297866.png)
 
   - **space-around**: Alinha os itens com espaçamentos ao redor deles. Só funciona com o wrap setado. css: "align-content".
 
+    row
     ![space-around row](https://user-images.githubusercontent.com/14116020/79191272-8f710200-7dfc-11ea-9d43-664a65a2bc69.png)
 
+    col
     ![space-around col](https://user-images.githubusercontent.com/14116020/79191348-b8919280-7dfc-11ea-9ab4-d92c31d26982.png)
 
   - **space-between**: Alinha os itens com espaçamentos entre eles. Só funciona com o wrap setado. css: "align-content".
