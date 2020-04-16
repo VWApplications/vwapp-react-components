@@ -29,6 +29,10 @@ export function toBoolean(value) {
   return (value === 'true');
 }
 
+export const onlyNumbers = value => {
+  return value.replace(/[^\d]/g, '');
+};
+
 export const toString = (list = [], join = ' ') => {
   let string = '';
   list.map((item, index) => {
