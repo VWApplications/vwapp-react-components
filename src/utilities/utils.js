@@ -9,7 +9,15 @@ export function isEmpty(obj) {
 }
 
 export function formatWithLeftZero(number) {
-  return number < 10 ? `0${number}` : number;
+  return number < 10 ? `0${number}` : `${number}`;
+}
+
+export function replaceAll(target, search, replacement) {
+  return target.replace(new RegExp(search, 'g'), replacement);
+}
+
+export function makeURL(target) {
+  return replaceAll(target, ' ', '-').toLowerCase();
 }
 
 export function moveToTop() {

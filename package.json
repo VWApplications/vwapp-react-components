@@ -1,11 +1,10 @@
 {
   "name": "vwapp-react-components",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Componentes bootstrap usando react.",
   "keywords": [
     "bootstrap",
     "components",
-    "form",
     "styles",
     "react"
   ],
@@ -39,7 +38,8 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "sweetalert2": "^9.10.12"
   },
   "peerDependencies": {
     "bootstrap": "^4.4.1",
@@ -47,7 +47,8 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
-    "styled-components": "^5.1.0"
+    "styled-components": "^5.1.0",
+    "sweetalert2": "^9.10.12"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

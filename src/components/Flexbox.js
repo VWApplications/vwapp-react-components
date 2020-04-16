@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { toBoolean } from '../utils';
+import { toBoolean } from '../utilities/utils';
 
 const CustomFlexContainer = styled.div`
   display: flex;
