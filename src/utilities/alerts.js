@@ -40,7 +40,7 @@ export const successAlert = (title, text) => {
   }).then(() => true);
 };
 
-export async function choiceAlert(title, text, yesTextButton, noTextButton) {
+export async function choiceAlert(title, text, yesTextButton = 'Sim', noTextButton = 'Não') {
   return Swal.fire({
     title: title,
     text: text,

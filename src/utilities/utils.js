@@ -20,11 +20,6 @@ export function makeURL(target) {
   return replaceAll(target, ' ', '-').toLowerCase();
 }
 
-export function moveToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 export function toBoolean(value) {
   return (value === 'true');
 }
