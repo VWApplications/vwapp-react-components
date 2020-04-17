@@ -11,9 +11,9 @@ const FlexItem = styled(Box)`
 
 export default () => (
   <Fragment>
-    <FlexContainer reverse direction="row" justify="space-around" align="center" className="bg-dark" style={{height: "200px"}}>
-      <FlexItem>01</FlexItem>
-      <FlexItem>02</FlexItem>
+    <FlexContainer as="ul" reverse direction="row" justify="space-around" align="center" className="bg-dark list-unstyled" style={{height: "200px"}}>
+      <FlexItem as="li">01</FlexItem>
+      <FlexItem as="li">02</FlexItem>
     </FlexContainer>
     <Line />
     <FlexContainer wrap direction="col" justify="center" align="stretch" className="bg-dark" style={{height: "200px"}}>

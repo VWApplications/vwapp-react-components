@@ -77,6 +77,8 @@ Componentes para facilitar o uso do flexbox.
 
 As imagens estão organizados em direction **row**, **col**, e **wrap** respectivamente. Exceção do atributo **wrap** que ta organizado em false e true.
 
+* **as**: Substitui a tag padrão (```<div>```) do component, por exemplo, ```<FlexContainer as="ul">```.
+
 * **direction**: Empilha os itens horizontalmente ou verticalmente, ou seja, da esquerda para a direita ou de cima para baixo. (String - padrão: "row" - css: flex-direction).
 
   - **row**: Empilha os itens horizontalmente, ou seja, da esquerda para a direita.
