@@ -1,6 +1,6 @@
 {
   "name": "vwapp-react-components",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "Componentes bootstrap usando react.",
   "keywords": [
     "bootstrap",
@@ -36,6 +36,7 @@
     "bootstrap": "^4.4.1",
     "react": "^16.0.0",
     "react-bootstrap": "^1.0.0",
+    "react-customscroll": "^4.2.0",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
     "styled-components": "^5.1.0",
@@ -45,6 +46,7 @@
     "bootstrap": "^4.4.1",
     "react": "^16.0.0",
     "react-bootstrap": "^1.0.0",
+    "react-customscroll": "^4.2.0",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
     "styled-components": "^5.1.0",
