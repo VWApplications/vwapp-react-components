@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.js": "/vwapp-react-components/static/js/main.f8cc1d1f.chunk.js",
-    "main.js.map": "/vwapp-react-components/static/js/main.f8cc1d1f.chunk.js.map",
+    "main.js": "/vwapp-react-components/static/js/main.12e9e7e0.chunk.js",
+    "main.js.map": "/vwapp-react-components/static/js/main.12e9e7e0.chunk.js.map",
     "runtime-main.js": "/vwapp-react-components/static/js/runtime-main.14bb5b4b.js",
     "runtime-main.js.map": "/vwapp-react-components/static/js/runtime-main.14bb5b4b.js.map",
     "static/css/2.7ad897a5.chunk.css": "/vwapp-react-components/static/css/2.7ad897a5.chunk.css",
-    "static/js/2.b39b3430.chunk.js": "/vwapp-react-components/static/js/2.b39b3430.chunk.js",
-    "static/js/2.b39b3430.chunk.js.map": "/vwapp-react-components/static/js/2.b39b3430.chunk.js.map",
+    "static/js/2.9ced8d1d.chunk.js": "/vwapp-react-components/static/js/2.9ced8d1d.chunk.js",
+    "static/js/2.9ced8d1d.chunk.js.map": "/vwapp-react-components/static/js/2.9ced8d1d.chunk.js.map",
     "index.html": "/vwapp-react-components/index.html",
-    "precache-manifest.bd177d206380d01090abc60b19bd6cdc.js": "/vwapp-react-components/precache-manifest.bd177d206380d01090abc60b19bd6cdc.js",
+    "precache-manifest.4764f3c181460c30482189c1d89dbe2a.js": "/vwapp-react-components/precache-manifest.4764f3c181460c30482189c1d89dbe2a.js",
     "service-worker.js": "/vwapp-react-components/service-worker.js",
     "static/css/2.7ad897a5.chunk.css.map": "/vwapp-react-components/static/css/2.7ad897a5.chunk.css.map",
-    "static/js/2.b39b3430.chunk.js.LICENSE.txt": "/vwapp-react-components/static/js/2.b39b3430.chunk.js.LICENSE.txt"
+    "static/js/2.9ced8d1d.chunk.js.LICENSE.txt": "/vwapp-react-components/static/js/2.9ced8d1d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.14bb5b4b.js",
     "static/css/2.7ad897a5.chunk.css",
-    "static/js/2.b39b3430.chunk.js",
-    "static/js/main.f8cc1d1f.chunk.js"
+    "static/js/2.9ced8d1d.chunk.js",
+    "static/js/main.12e9e7e0.chunk.js"
   ]
 }
