@@ -1,5 +1,5 @@
-import React from 'react';
-import ExternalPagination from 'react-js-pagination';
+import React from "react";
+import ExternalPagination from "react-js-pagination";
 
 export class Pagination extends React.Component {
   constructor(props) {
@@ -7,10 +7,10 @@ export class Pagination extends React.Component {
     this.attributes = { ...props };
     this.itemPerPage = props.itemPerPage || 20;
     this.pageRange = props.pageRange || 5;
-    this.firstPageText = props.firstPageText || 'Primeiro';
-    this.lastPageText = props.lastPageText || 'Último';
-    this.prevPageText = props.prevPageText || '<<';
-    this.nextPageText = props.nextPageText || '>>';
+    this.firstPageText = props.firstPageText || "Primeiro";
+    this.lastPageText = props.lastPageText || "Último";
+    this.prevPageText = props.prevPageText || "<<";
+    this.nextPageText = props.nextPageText || ">>";
   }
 
   render() {
@@ -36,6 +36,6 @@ export class Pagination extends React.Component {
         pageRangeDisplayed={this.pageRange}
         onChange={page => handlePagination(page)}
       />
-    )
+    );
   }
 }

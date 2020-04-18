@@ -1,11 +1,11 @@
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 export const closeSwal = () => (Swal.close());
 
 export const loadingAlert = (title, text, timer = 500000) => {
   return Swal.fire({
     animation: false,
-    customClass: 'animation fadeIn bg-white',
+    customClass: "animation fadeIn bg-white",
     allowOutsideClick: false,
     timer: timer,
     title,
@@ -18,7 +18,7 @@ export const loadingAlert = (title, text, timer = 500000) => {
 
 export const errorAlert = (title, text) => {
   return Swal.fire({
-    icon: 'error',
+    icon: "error",
     title: title,
     text: text
   }).then(() => true);
@@ -26,7 +26,7 @@ export const errorAlert = (title, text) => {
 
 export const infoAlert = (title, text) => {
   return Swal.fire({
-    icon: 'info',
+    icon: "info",
     title: title,
     text: text
   }).then(() => true);
@@ -34,22 +34,22 @@ export const infoAlert = (title, text) => {
 
 export const successAlert = (title, text) => {
   return Swal.fire({
-    icon: 'success',
+    icon: "success",
     title: title,
     text: text
   }).then(() => true);
 };
 
-export async function choiceAlert(title, text, yesTextButton = 'Sim', noTextButton = 'Não') {
+export async function choiceAlert(title, text, yesTextButton = "Sim", noTextButton = "Não") {
   return Swal.fire({
     title: title,
     text: text,
-    icon: 'question',
+    icon: "question",
     showCancelButton: true,
     confirmButtonText: yesTextButton,
-    confirmButtonColor: '#3085d6',
+    confirmButtonColor: "#3085d6",
     cancelButtonText: noTextButton,
-    cancelButtonColor: '#d33'
+    cancelButtonColor: "#d33"
   }).then((result) => {
     if (result.value) {
       return true;

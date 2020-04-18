@@ -1,5 +1,5 @@
-import React from 'react';
-import { CustomJson } from '../styles';
+import React from "react";
+import { CustomJson } from "../styles";
 
 export const BreakLine = props => <br {...props} />;
 
