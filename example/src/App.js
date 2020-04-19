@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   async utils() {
-    const ok = await Utilities.alert("success", ["Seja bem vindo!", "Ambiente de desenvolvimento"]);
+    const ok = await Utilities.alert("success", "Seja bem vindo!", "Ambiente de desenvolvimento");
     console.log(ok);
   }
 
