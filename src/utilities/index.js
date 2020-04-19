@@ -11,15 +11,15 @@ export class Alert {
   static run(type) {
     switch (type) {
       case this.INFO:
-        return infoAlert.apply(null, [...arguments].slice(1));
+        return infoAlert.apply(infoAlert, [...arguments].slice(1));
       case this.SUCCESS:
-        return successAlert.apply(null, [...arguments].slice(1));
+        return successAlert.apply(successAlert, [...arguments].slice(1));
       case this.ERROR:
-        return errorAlert.apply(null, [...arguments].slice(1));
+        return errorAlert.apply(errorAlert, [...arguments].slice(1));
       case this.LOADING:
-        return loadingAlert.apply(null, [...arguments].slice(1));
+        return loadingAlert.apply(loadingAlert, [...arguments].slice(1));
       case this.CHOICE:
-        return choiceAlert.apply(null, [...arguments].slice(1));
+        return choiceAlert.apply(choiceAlert, [...arguments].slice(1));
       case this.CLOSE:
         return closeSwal();
       default:
