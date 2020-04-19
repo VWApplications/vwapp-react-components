@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import { Utilities } from 'vwapp-react-components';
+import { Alert } from 'vwapp-react-components';
 import Flexbox from './components/Flexbox';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   async utils() {
-    const ok = await Utilities.alert("success", "Seja bem vindo!", "Ambiente de desenvolvimento");
+    const ok = await Alert.run(Alert.SUCCESS, "Seja bem vindo!", "Ambiente de desenvolvimento");
     console.log(ok);
   }
 

@@ -1,19 +1,26 @@
 import { infoAlert, successAlert, errorAlert, loadingAlert, choiceAlert, closeSwal } from "./alerts";
 
-export class Utilities {
-  static alert(type) {
+export class Alert {
+  static INFO = "INFO";
+  static SUCCESS = "SUCCESS";
+  static ERROR = "ERROR";
+  static LOADING = "LOADING";
+  static CHOICE = "CHOICE";
+  static CLOSE = "CLOSE";
+
+  static run(type) {
     switch (type) {
-      case "info":
+      case this.INFO:
         return infoAlert.apply(null, [...arguments].slice(1));
-      case "success":
+      case this.SUCCESS:
         return successAlert.apply(null, [...arguments].slice(1));
-      case "error":
+      case this.ERROR:
         return errorAlert.apply(null, [...arguments].slice(1));
-      case "loading":
+      case this.LOADING:
         return loadingAlert.apply(null, [...arguments].slice(1));
-      case "choice":
+      case this.CHOICE:
         return choiceAlert.apply(null, [...arguments].slice(1));
-      case "close":
+      case this.CLOSE:
         return closeSwal();
       default:
         return null;
