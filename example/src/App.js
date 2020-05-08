@@ -9,7 +9,7 @@ import {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { showSidebar: true };
+    this.state = { showSidebar: false };
   }
 
   __toogleSidebar = () => {
@@ -19,12 +19,6 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <SidebarButton
-          whiteIcon
-          className="btn btn-sm btn-dark"
-          hidden={this.state.showSidebar}
-          onClick={() => this.__toogleSidebar()}
-        />
         <Sidebar
           show={this.state.showSidebar}
           title="VWApp"
@@ -75,6 +69,7 @@ class App extends Component {
           <Container>
             <h1 className="text-center">Ambiente de desenvolvimento.</h1>
             <hr />
+            <SidebarButton hidden={this.state.showSidebar} onClick={() => this.__toogleSidebar()} />
             <Flexbox />
           </Container>
         </PageContent>

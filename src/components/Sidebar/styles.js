@@ -23,15 +23,34 @@ export const PageContent = styled.main`
 
 export const CustomSidebarButton = styled.a`
   display: ${props => props.hidden ? "none" : "block" };
-  left: 0;
-  border-radius: 0 4px 4px 0px;
+  color: white;
+  cursor: pointer;
+  border: unset;
   width: 35px;
+  background-color: transparent;
   transition-delay: 0.3s;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+
+  :hover {
+    background-color: transparent;
+  }
+
+  :focus {
+    color: black;
+    background-color: transparent;
+    border-color: unset;
+    box-shadow: none;
+  }
+
+  :active {
+    color: black;
+    background-color: transparent;
+    border-color: unset;
+  }
 `;
 
 /*----------------sidebar-wrapper----------------*/
