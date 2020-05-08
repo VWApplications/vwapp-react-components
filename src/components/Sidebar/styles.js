@@ -6,7 +6,6 @@ export const PageContent = styled.main`
   display: inline-block;
   width: 100%;
   padding-left: 0px;
-  padding-top: 20px;
   overflow-x: hidden;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
