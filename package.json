@@ -39,6 +39,7 @@
     "react-customscroll": "^4.2.0",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
+    "react-slidedown": "^2.4.5",
     "styled-components": "^5.1.0",
     "sweetalert2": "^9.10.12"
   },
@@ -47,6 +48,7 @@
     "react": "^16.0.0",
     "react-bootstrap": "^1.0.0",
     "react-customscroll": "^4.2.0",
+    "react-slidedown": "^2.4.5",
     "react-dom": "^16.13.1",
     "react-js-pagination": "^3.0.3",
     "styled-components": "^5.1.0",
