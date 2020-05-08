@@ -140,6 +140,7 @@ export const CloseSidebarButton = styled.div`
 
 export const CustomSidebarHeader = styled.div`
   padding: 20px;
+  display: ${props => props.show ? "block" : "none"};
   overflow: hidden;
   border-top: 1px solid #3a3f48;
 `;

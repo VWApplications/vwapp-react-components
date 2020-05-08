@@ -5,7 +5,7 @@ import {
 } from "../styles";
 
 export const SidebarHeader = props => (
-  <CustomSidebarHeader>
+  <CustomSidebarHeader show={props.show}>
     <CustomUserPic>
       <UserImage
         className="img-responsive img-rounded"

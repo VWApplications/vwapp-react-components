@@ -8,13 +8,13 @@ import { FooterItem } from "./FooterItem";
 
 export class Sidebar extends React.Component {
   render() {
-    const { show, title, children, close, img, name, role, footerItems } = this.props;
+    const { show, title, children, close, img, name, role, footerItems, header = true } = this.props;
 
     return (
         <SidebarWrapper open={show}>
           <SidebarContent>
             <SidebarBrand title={title} close={close} />
-            <SidebarHeader img={img} name={name} role={role} />
+            <SidebarHeader img={img} name={name} role={role} show={header} />
             <SidebarMenu>{children}</SidebarMenu>
           </SidebarContent>
           {footerItems && (
