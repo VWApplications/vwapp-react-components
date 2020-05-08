@@ -15,7 +15,7 @@ export const PageContent = styled.main`
   transition: all 0.3s ease;
 
   @media screen and (min-width: 768px) {
-    padding-left: ${props => props.showSidebar ? "300px" : "0px"};
+    padding-left: ${props => props.showSidebar ? "260px" : "0px"};
   }
 `;
 
