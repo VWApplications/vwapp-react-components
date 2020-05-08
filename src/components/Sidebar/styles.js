@@ -63,7 +63,9 @@ export const SidebarWrapper = styled.nav`
   top: 0;
   left: ${props => props.open ? "0px" : "-300px"};
   z-index: 999;
-  background: #31353D;
+  background: #283048;
+  background: -webkit-linear-gradient(to bottom, #283048, #859398);
+  background: linear-gradient(to bottom, #283048, #859398);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
