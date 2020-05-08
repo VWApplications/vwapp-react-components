@@ -1,12 +1,12 @@
 import React from "react";
-import { CustomMenuItem, CustomMenuLink } from "../styles";
+import { CustomMenuItem, CustomMenuLink, MenuItemBadge, MenuItemIcon } from "../styles";
 
 export const MenuItem = props => (
   <CustomMenuItem>
     <CustomMenuLink onClick={props.onClick}>
-      {props.icon && <i className={props.icon}></i>}
+      {props.icon && <MenuItemIcon className={props.icon}></MenuItemIcon>}
       {props.title}
-      {props.badge && <span className={`badge badge-pill badge-${props.badgeVariant}`}>{props.badge}</span>}
+      {props.badge && <MenuItemBadge className={`badge badge-pill badge-${props.badgeVariant}`}>{props.badge}</MenuItemBadge>}
     </CustomMenuLink>
   </CustomMenuItem>
 );

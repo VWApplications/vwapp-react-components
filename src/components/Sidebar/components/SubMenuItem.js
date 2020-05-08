@@ -1,11 +1,11 @@
 import React from "react";
-import { CustomSubMenuItem } from "../styles";
+import { CustomSubMenuItem, SubMenuLink, SubMenuBadge } from "../styles";
 
 export const SubMenuItem = props => (
   <CustomSubMenuItem>
-    <a onClick={props.onClick}>
+    <SubMenuLink onClick={props.onClick}>
       {props.title}
-      {props.badge && <span className={`badge badge-pill badge-${props.badgeVariant}`}>{props.badge}</span>}
-    </a>
+      {props.badge && <SubMenuBadge className={`badge badge-pill badge-${props.badgeVariant}`}>{props.badge}</SubMenuBadge>}
+    </SubMenuLink>
   </CustomSubMenuItem>
 );

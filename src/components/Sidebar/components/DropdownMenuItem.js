@@ -1,6 +1,9 @@
 import React from "react";
 import { SlideDown } from "./SlideDown";
-import { CustomSubMenuContainer, CustomSidebarDropdown, CustomDropdownItem } from "../styles";
+import {
+  CustomSubMenuContainer, CustomSidebarDropdown, CustomDropdownItem,
+  DropdownIcon, DropdownBadge
+} from "../styles";
 
 export class DropdownMenuItem extends React.Component {
   constructor(props) {
@@ -14,9 +17,9 @@ export class DropdownMenuItem extends React.Component {
     return (
       <CustomSidebarDropdown className={this.state.open ? "" : "closed"}>
         <CustomDropdownItem onClick={() => this.setState({open: !this.state.open})}>
-            <i className={icon}></i>
+            <DropdownIcon className={icon}></DropdownIcon>
             <span>{title}</span>
-            {badge && <span className={`badge badge-pill badge-${badgeVariant}`}>{badge}</span>}
+            {badge && <DropdownBadge className={`badge badge-pill badge-${badgeVariant}`}>{badge}</DropdownBadge>}
         </CustomDropdownItem>
         <SlideDown as="div" open={this.state.open}>
           <CustomSubMenuContainer>

@@ -19,7 +19,12 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <SidebarButton hidden={this.state.showSidebar} onClick={() => this.__toogleSidebar()} />
+        <SidebarButton
+          whiteIcon
+          className="btn btn-sm btn-dark"
+          hidden={this.state.showSidebar}
+          onClick={() => this.__toogleSidebar()}
+        />
         <Sidebar
           show={this.state.showSidebar}
           title="VWApp"
@@ -62,7 +67,7 @@ class App extends Component {
             <SubMenuItem title="Open street map" onClick={() => console.log("Open street map")} />
           </DropdownMenuItem>
           <HeaderMenu>Extra</HeaderMenu>
-          <MenuItem title="Documentation" icon="fa fa-book" onClick={() => console.log("Documentation")} badge="Beta" badgeVariant="primary" />
+          <MenuItem title="Documentation" icon="fa fa-book" onClick={() => console.log("Documentation")} badge="5" badgeVariant="primary" />
           <MenuItem title="Calendar" icon="fa fa-calendar" onClick={() => console.log("Calendar")} />
           <MenuItem title="Examples" icon="fa fa-folder" onClick={() => console.log("Examples")} />
         </Sidebar>

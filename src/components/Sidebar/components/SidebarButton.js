@@ -2,7 +2,7 @@ import React from "react";
 import { CustomSidebarButton } from "../styles";
 
 export const SidebarButton = props => (
-  <CustomSidebarButton className="btn btn-sm btn-dark" onClick={props.onClick} hidden={props.hidden}>
-    <i className="fas fa-bars text-light"></i>
+  <CustomSidebarButton className={props.className} onClick={props.onClick} hidden={props.hidden}>
+    <i className={`fas fa-bars ${props.whiteIcon ? "text-light" : ""}`}></i>
   </CustomSidebarButton>
 );

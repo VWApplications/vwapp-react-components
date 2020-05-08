@@ -1,8 +1,8 @@
 import React from "react";
-import { CustomSidebarMenu } from "../styles";
+import { CustomSidebarMenu, SidebarList } from "../styles";
 
 export const SidebarMenu = props => (
   <CustomSidebarMenu {...props}>
-    <ul>{props.children}</ul>
+    <SidebarList>{props.children}</SidebarList>
   </CustomSidebarMenu>
 );

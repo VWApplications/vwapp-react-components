@@ -22,7 +22,8 @@ export const PageContent = styled.main`
 /*----------------sidebar-button----------------*/
 
 export const CustomSidebarButton = styled.a`
-  left: ${props => props.hidden ? "none" : "block" };
+  display: ${props => props.hidden ? "none" : "block" };
+  left: 0;
   border-radius: 0 4px 4px 0px;
   width: 35px;
   transition-delay: 0.3s;
@@ -50,28 +51,20 @@ export const SidebarWrapper = styled.nav`
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 
-  ul li a i {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
   a {
     text-decoration: none;
     cursor: pointer;
   }
+`;
 
-  ul li:hover a i {
-      color: #16c7ff;
-      text-shadow:0px 0px 10px rgba(22, 199, 255, 0.5);
+export const SidebarList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li:hover a i {
+    color: white;
+    text-shadow: 0px 0px 10px white;
   }
 `;
 
@@ -93,7 +86,7 @@ export const CustomBrand = styled.div`
 `;
 
 export const BrandTitle = styled.div`
-  color: #818896;
+  color: #b8bfce;
   font-weight: bold;
   cursor: default;
   flex-grow: 1;
@@ -104,7 +97,7 @@ export const BrandTitle = styled.div`
   transition: all 0.3s ease;
 
   :hover {
-    color: #b8bfce;
+    color: white;
   }
 `;
 
@@ -181,14 +174,12 @@ export const CustomSidebarMenu = styled.div`
   border-top: 1px solid #3a3f48;
 `;
 
-export const CustomHeaderMenu = styled.li`
-  span {
-    font-weight: bold;
-    font-size: 14px;
-    padding: 15px 20px 5px 20px;
-    display: inline-block;
-    color: #6c7b88;
-  }
+export const CustomHeaderMenu = styled.span`
+  font-weight: bold;
+  font-size: 14px;
+  padding: 15px 20px 5px 20px;
+  display: inline-block;
+  color: #a1acb5;
 `;
 
 export const CustomMenuItem = styled.li`
@@ -200,7 +191,7 @@ export const CustomMenuItem = styled.li`
 `;
 
 export const CustomMenuLink = styled.a`
-  color: #818896;
+  color: #acb3bf !important;
   display: inline-block;
   width: 100%;
   text-decoration: none;
@@ -212,35 +203,39 @@ export const CustomMenuLink = styled.a`
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 
-  span.label, span.badge {
-    float: right;
-    margin-top: 8px;
-    margin-left: 5px;
-  }
-
   :hover {
-    > i::before {
-      display: inline-block;
-      animation: swing ease-in-out 0.5s 1 alternate;
-    }
-  }
-
-  i {
-    margin-right: 10px;
-    background: #3a3f48;
-    font-size: 12px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 4px;
+    color: white !important;
   }
 `;
+
+export const MenuItemIcon = styled.i`
+  margin-right: 10px;
+  background: #3a3f48;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+`;
+
+export const MenuItemBadge = styled.span`
+  float: right;
+  margin-top: 6px;
+  margin-left: 5px;
+`;
+
+/*----------------sidebar-dropdown-menu----------------*/
 
 export const CustomSidebarDropdown = styled.li`
   :hover {
     > a {
-      color: #b8bfce;
+      color: white !important;
     }
   }
 
@@ -251,16 +246,16 @@ export const CustomSidebarDropdown = styled.li`
     }
 
     > a {
-      color: #b8bfce;
+      color: white !important;
 
       i {
-        color: #16c7ff;
-        text-shadow:0px 0px 10px rgba(22, 199, 255, 0.5);
+        color: white;
+        text-shadow: 0px 0px 10px white;
       }
     }
   }
 
-  div {
+  > div {
     background: #3a3f48;
   }
 `;
@@ -271,7 +266,7 @@ export const CustomDropdownItem = styled.a`
   text-decoration: none;
   position: relative;
   padding: 8px 30px 8px 20px;
-  color: #818896;
+  color: #acb3bf !important;
 
   :after {
     font-family: "Font Awesome 5 Free";
@@ -288,37 +283,35 @@ export const CustomDropdownItem = styled.a`
     background: 0 0;
     position: absolute;
     right: 15px;
-    top: 14px;
+    top: 10px;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
+`;
 
-  i {
-    margin-right: 10px;
-    font-size: 12px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 4px;
-    background: #3a3f48;
-  }
+export const DropdownBadge = styled.span`
+  float: right;
+  margin-top: 5px;
+  margin-left: 5px;
+`;
 
-  span.label, span.badge {
-    float: right;
-    margin-top: 8px;
-    margin-left: 5px;
-  }
-
-  :hover {
-    > i::before {
-      display: inline-block;
-      animation: swing ease-in-out 0.5s 1 alternate;
-    }
-  }
+export const DropdownIcon = styled.i`
+  margin-right: 10px;
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  background: #3a3f48;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 `;
 
 export const CustomSubMenuContainer = styled.ul`
@@ -328,44 +321,44 @@ export const CustomSubMenuContainer = styled.ul`
 export const CustomSubMenuItem = styled.li`
   padding: 5px 5px 5px 25px;
   font-size: 13px;
+`;
 
-  a {
-    cursor: pointer;
+export const SubMenuLink = styled.a`
+  cursor: pointer;
+  color: #acb3bf !important;
 
-    :hover {
-      color: #818896;
+  :hover {
+    color: white !important;
+  }
 
-      :before {
-        color: #16c7ff;
-        text-shadow:0px 0px 10px rgba(22, 199, 255, 0.5);
-      }
-    }
-
-    :before {
-      content: "\f111";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 400;
-      font-style: normal;
-      display: inline-block;
-      text-align: center;
-      text-decoration: none;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      margin-right: 10px;
-      font-size: 8px;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -ms-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease;
-    }
-
-    .badge, .label {
-      float: right;
-      margin-top: 0px;
-    }
+  :before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 10px;
+    position: relative;
+    bottom: 1px;
+    font-size: 8px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 `;
+
+export const SubMenuBadge = styled.span`
+  float: right;
+  margin-top: 0px;
+`;
+
+/*----------------sidebar-footer----------------*/
 
 export const CustomSidebarFooter = styled.div`
   position: absolute;
@@ -391,14 +384,15 @@ export const CustomFooterItem = styled.a`
   height: 30px;
   line-height: 30px;
   position: relative;
-  color: #818896;
+  color: #818896 !important;
 
   :hover i {
     color: #b8bfce;
   }
+`;
 
-  .notification {
-    position: absolute;
-    top: 0;
-  }
+export const NotificationBadge = styled.span`
+  position: absolute;
+  top: 0;
+  right: 0;
 `;
