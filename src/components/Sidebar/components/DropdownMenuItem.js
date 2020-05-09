@@ -15,7 +15,7 @@ export class DropdownMenuItem extends React.Component {
     const { title, icon, children, badge = "", badgeVariant = null } = this.props;
 
     return (
-      <CustomSidebarDropdown className={this.state.open ? "" : "closed"}>
+      <CustomSidebarDropdown className={this.state.open ? "sidebar-menu-dropdown" : "sidebar-menu-dropdown closed"}>
         <CustomDropdownItem onClick={() => this.setState({open: !this.state.open})}>
             <DropdownIcon className={icon}></DropdownIcon>
             <span>{title}</span>

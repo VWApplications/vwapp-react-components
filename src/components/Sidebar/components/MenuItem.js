@@ -2,7 +2,7 @@ import React from "react";
 import { CustomMenuItem, CustomMenuLink, MenuItemBadge, MenuItemIcon } from "../styles";
 
 export const MenuItem = props => (
-  <CustomMenuItem>
+  <CustomMenuItem className="sidebar-menu">
     <CustomMenuLink onClick={props.onClick}>
       {props.icon && <MenuItemIcon className={props.icon}></MenuItemIcon>}
       {props.title}

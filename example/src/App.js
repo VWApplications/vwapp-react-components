@@ -65,7 +65,7 @@ class App extends Component {
           <MenuItem title="Calendar" icon="fa fa-calendar" onClick={() => console.log("Calendar")} />
           <MenuItem title="Examples" icon="fa fa-folder" onClick={() => console.log("Examples")} />
         </Sidebar>
-        <PageContent showSidebar={this.state.showSidebar}>
+        <PageContent id="page-content" showSidebar={this.state.showSidebar}>
           <Container>
             <h1 className="text-center">Ambiente de desenvolvimento.</h1>
             <hr />

@@ -3,6 +3,6 @@ import { CustomSidebarMenu, SidebarList } from "../styles";
 
 export const SidebarMenu = props => (
   <CustomSidebarMenu {...props}>
-    <SidebarList>{props.children}</SidebarList>
+    <SidebarList id="sidebar-menu-list">{props.children}</SidebarList>
   </CustomSidebarMenu>
 );
